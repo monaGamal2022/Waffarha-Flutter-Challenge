@@ -1,4 +1,4 @@
-import 'package:waffarha_challenge/data/models/photo_item_model.dart';
+import 'package:waffarha_challenge/photos_gallery/data/models/photo_item_model.dart';
 
 class PhotosApiResponseModel {
   final List<PhotoItemModel> photosList;

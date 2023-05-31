@@ -3,15 +3,15 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-import '../core/exceptions.dart';
-import '../core/failure_handler.dart';
-import '../core/failures.dart';
-import '../core/models/message_response.dart';
-import '../core/models/response_model.dart';
-import '../core/request/base_request.dart';
-import '../core/services/app_logger.dart';
-import '../core/status_checker.dart';
-import '../core/utils/request_to_curl.dart';
+import '../../core/exceptions.dart';
+import '../../core/failure_handler.dart';
+import '../../core/failures.dart';
+import '../../core/models/message_response.dart';
+import '../../core/models/response_model.dart';
+import '../../core/request/base_request.dart';
+import '../../core/services/app_logger.dart';
+import '../../core/status_checker.dart';
+import '../../core/utils/request_to_curl.dart';
 
 class APIsManager {
   APIsManager({
