@@ -29,21 +29,29 @@ class _PhotosGalleryScreenState extends State<PhotosGalleryScreen> {
       builder: (context, state) {
         return Scaffold(
           body: state.isLoading
-              ? ListView.separated(
-                  itemCount: 10,
-                  separatorBuilder: (context, index) =>
-                      const SizedBox(height: 10),
-                  itemBuilder: (context, index) => const LoadingShimmerWidget(),
+              ? Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: ListView.separated(
+                    itemCount: 10,
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 10),
+                    itemBuilder: (context, index) =>
+                        const LoadingShimmerWidget(),
+                  ),
                 )
               : state.photosApiResponse != null
-                  ? ListView.separated(
-                      separatorBuilder: (context, index) =>
-                          const SizedBox(height: 10),
-                      itemCount:
-                          state.photosApiResponse?.photosList.length ?? 0,
-                      itemBuilder: (context, index) => PhotoListItem(
-                        photoItemModel:
-                            state.photosApiResponse!.photosList[index],
+                  ? Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: ListView.separated(
+                        clipBehavior: Clip.none,
+                        separatorBuilder: (context, index) =>
+                            const SizedBox(height: 16),
+                        itemCount:
+                            state.photosApiResponse?.photosList.length ?? 0,
+                        itemBuilder: (context, index) => PhotoListItem(
+                          photoItemModel:
+                              state.photosApiResponse!.photosList[index],
+                        ),
                       ),
                     )
                   : FailurePlaceHolderWidget(

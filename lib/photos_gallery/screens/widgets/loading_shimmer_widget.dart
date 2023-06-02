@@ -7,18 +7,15 @@ class LoadingShimmerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Shimmer.fromColors(
-      baseColor: Colors.black12,
-      highlightColor: Colors.white,
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Column(
-          children: const [
-            Text('PPPPPPPPPPPPPPPP'),
-            Text('PPPPPPPPPPPPPPPP'),
-            Text('PPPPPPPPPPPPPPPP'),
-          ],
+      baseColor: Colors.grey.withOpacity(.1),
+      highlightColor: Colors.white.withOpacity(.2),
+      child: SizedBox(
+        height: 200,
+        child: Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.0),
+          ),
+          child: const SizedBox(),
         ),
       ),
     );

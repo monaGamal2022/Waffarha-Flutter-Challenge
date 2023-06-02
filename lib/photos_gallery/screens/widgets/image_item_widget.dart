@@ -10,20 +10,67 @@ class PhotoListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
+      clipBehavior: Clip.none,
       children: [
         PhotoItemWidget(imageUrl: photoItemModel.url),
-        Card(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0),
+        Positioned(
+          bottom: 0,
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width - 32,
+            child: Card(
+              elevation: 3,
+              margin: EdgeInsets.zero,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12.0)),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    _InfoBuilder(
+                        infoKey: "Photo Title", value: photoItemModel.title),
+                    const SizedBox(height: 8),
+                    _InfoBuilder(
+                        infoKey: "Photo thumbnailUrl",
+                        value: photoItemModel.thumbnailUrl),
+                    const SizedBox(height: 8),
+                    _InfoBuilder(
+                      infoKey: "Photo album Id",
+                      value: photoItemModel.albumId,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ),
-          child: Column(
-            children: [
-              Text(photoItemModel.title),
-              const SizedBox(height: 8),
-              Text(photoItemModel.thumbnailUrl),
-              const SizedBox(height: 8),
-              Text(photoItemModel.albumId),
-            ],
+        ),
+      ],
+    );
+  }
+}
+
+class _InfoBuilder extends StatelessWidget {
+  const _InfoBuilder({
+    super.key,
+    required this.infoKey,
+    required this.value,
+  });
+
+  final String infoKey;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("$infoKey: ", style: const TextStyle(fontWeight: FontWeight.bold)),
+        Expanded(
+          child: Text(
+            value,
+            softWrap: true,
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
           ),
         ),
       ],

@@ -44,8 +44,10 @@ class APIsManager {
 
   Future<Either<Failure, R>> send<R, ER extends ResponseModel>({
     required Request request,
-    required R Function(Map<String, dynamic> map)? responseFromMap,
+    R Function(Map<String, dynamic> map)? responseFromMap,
     ER Function(Map<String, dynamic> map)? errorResponseFromMap,
+    bool isListResponse = false,
+    R Function(List list)? responseFromList,
   }) async {
     Response<dynamic>? response;
     try {
@@ -66,20 +68,25 @@ class APIsManager {
       dio2curl(response.requestOptions, isMultiPart: request.multiPart);
       var resp = response.data;
 
-      if (resp is! Map<String, dynamic>) {
-        dynamic mapResponse;
-        try {
-          mapResponse = json.decode(response.data);
-        } catch (e) {
-          e.toString();
-        }
-        if (mapResponse != null && mapResponse is Map) {
-          resp = mapResponse;
-        } else {
-          resp = {'response': resp};
-        }
+      // if (resp is! Map<String, dynamic>) {
+      //   dynamic mapResponse;
+      //   try {
+      //     mapResponse =
+      //         isListResponse ? response.data : json.decode(response.data);
+      //   } catch (e) {
+      //     e.toString();
+      //   }
+      //   if (mapResponse != null && mapResponse is Map) {
+      //     resp = mapResponse;
+      //   } else {
+      //     resp = {'response': resp};
+      //   }
+      // }
+
+      if (response.data is List && responseFromList != null) {
+        return Right(responseFromList(response.data));
       }
-      return Right(responseFromMap!(resp));
+      return Right(responseFromMap!(response.data));
     } on DioError catch (error) {
       // dio2curl(error.response?.requestOptions);
       if (error.type == DioErrorType.badResponse) {

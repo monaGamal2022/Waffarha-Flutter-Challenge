@@ -5,7 +5,7 @@ class PhotosApiResponseModel {
 
   PhotosApiResponseModel({required this.photosList});
 
-  factory PhotosApiResponseModel.fromMap(List<Map<String, dynamic>> map) {
+  factory PhotosApiResponseModel.fromMap(List map) {
     return PhotosApiResponseModel(
       photosList: List<PhotoItemModel>.from(
         map.map((x) => PhotoItemModel.fromMap(x)),

@@ -18,7 +18,10 @@ class PhotosGalleryCubit extends Cubit<PhotosGalleryState> {
     final result = await _photosRepository.getPhotosList();
     result.fold(
       (failure) => emit(state.requestFailure(failure)),
-      (photosApiResponse) => emit(state.requestSuccess(photosApiResponse)),
+      (photosApiResponse) async {
+        final ls = await photosApiResponse;
+        emit(state.requestSuccess(ls));
+      },
     );
   }
 }
