@@ -1,21 +1,20 @@
 # waffarha_challenge!
+ ![Capture](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/48192218-b785-4dee-ab7e-44fc320dda0d)
+![Uploading ![Screenshot_1685711276](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/c408edcd-cfa7-4f2a-84a3-4dd52abb53fa)
+Screenshot_1685711270.pn![Up![Screenshot_1685711270](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/39b2ce88-00d1-4127-ba92-2f3348c9d516)
+![Screenshot_1685711284](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/780f9528-ccec-4530-8b65-db85992011bc)
+![Screenshot_1685711276](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/109c52bc-4096-4551-ab29-ad515e266f2f)
+![Screenshot_1685711279](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/9e8ee3b1-d9ac-4b88-8498-783927ee1c09)
+![Screenshot_1685711290](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/30c5c758-6e10-4e1a-b70b-a06da9a522e0)
+![Screenshot_1685711284](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/9b4b924b-532c-4b01-b998-426b7945c5ed)
+![Screenshot_1685711293](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/e9ca10e5-d626-4c89-9b45-09dc1dbb01f1)
+![Screenshot_1685711290](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/62e941b2-c5b0-49ac-9f7b-1f50114b7ca7)
+![Screenshot_1685711293](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/936b8d7f-7ef5-48af-9e60-a842fc9b51c0)
+![Capture](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/00c5c07e-e730-49c1-8467-920816609547)
+loading Screenshot_1685711279.png…]()
+g…]()
 
-
-<img src="https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/6587fd14-9da9-4d18-8dea-71aac72a3eaf" alt="alt-text" style="width:desired-width;height:desired-height;">
-
-<img src="[https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/6587fd14-9da9-4d18-8dea-71aac72a3eaf](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/23bd3012-9032-4446-8b3e-c0afbfe2cbe2)" alt="alt-text" style="width:desired-width;height:desired-height;">
-
-<img src="https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/6d0db0f7-672d-4957-a78a-9cca8bfe1b32" alt="alt-text" style="width:desired-width;height:desired-height;">
-
-
-#### functionalties: ![Screenshot_1685711293](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/6587fd14-9da9-4d18-8dea-71aac72a3eaf)
-![Capture](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/23bd3012-9032-4446-8b3e-c0afbfe2cbe2)
-![Screenshot_1685711270](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/50044dee-6c4a-483a-8bae-5a238ef34749)
-![Screenshot_1685711276](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/792520ab-ffb1-4866-90aa-a2a7cf32280c)
-![Screenshot_1685711279](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/e74b71cd-5d8b-4fd8-8204-96b7d751ad9a)
-![Screenshot_1685711284](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/934bb301-060b-47b6-94dc-b41f4fbfe7c0)
-![Screenshot_1685711290](https://github.com/monaGamal2022/Waffarha-Flutter-Challenge/assets/109663539/6d0db0f7-672d-4957-a78a-9cca8bfe1b32)
-
+#### functionalties: 
 - fetching data from api paginated
 - sort data on photo title &abumId
 - paginate the data when user reach limit  
