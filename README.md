@@ -1,16 +1,13 @@
 # waffarha_challenge
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### functionalties: 
+- fetching data from api paginated
+- sort data on photo title &abumId
+- paginate the data when user reach limit  
+- handle loading state & Empty state & failure
+#### code architecture 
+- the code is divided into two main parts [core, features], core contains all the shared files enables app to do some stuff like [calling apis] 
+we can say that core is an abstraction for calling apis and some services like logger, Crashlytics extc,
+- the features directory where i put all the files for the feature to work like [presentation layer, logic layer] 
+- the flow is ui calling logic and logic talks to data layer for remote call 
+- get it is used for dependency injection beside cubit for state manegment
