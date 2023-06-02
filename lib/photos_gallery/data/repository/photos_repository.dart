@@ -11,20 +11,19 @@ class PhotosRepository {
 
   PhotosRepository(this._apIsManager);
 
-  Future<Either<Failure, Future<PhotosApiResponseModel>>>
-      getPhotosList() async {
-    log("starting time of calling api" + DateTime.now().toString());
+  Future<Either<Failure, Future<PhotosApiResponseModel>>> getPhotosList({
+    required GetPhotosRequest request,
+  }) async {
+    log("starting time of calling api${DateTime.now()}");
 
     final result = await _apIsManager.send(
-      request: GetPhotosRequest(),
-      isListResponse: true,
-      responseFromList: (list) async {
-        log("starting time of parsing" + DateTime.now().toString());
-
-        return deserializePhotosApiResponseModel(list);
-      },
-    );
-    log("end time of parsing" + DateTime.now().toString());
+        request: request,
+        isListResponse: true,
+        responseFromList: (list) async {
+          log("starting time of parsing${DateTime.now()}");
+          return deserializePhotosApiResponseModel(list);
+        });
+    log("end time of parsing${DateTime.now()}");
     return result;
   }
 }

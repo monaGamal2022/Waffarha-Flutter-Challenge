@@ -2,22 +2,20 @@ part of 'photos_cubit.dart';
 
 class PhotosGalleryState {
   final bool isLoading;
-  final PhotosApiResponseModel? photosApiResponse;
+  final String? sortBy;
+  final bool isPaginating;
+  final List<PhotoItemModel>? photosList;
+  final int startOfTheCurrentPage;
   final Failure? failure;
 
   const PhotosGalleryState({
-    this.isLoading = true,
+    this.isLoading = false,
+    this.isPaginating = false,
     this.failure,
-    this.photosApiResponse,
+    this.sortBy,
+    this.startOfTheCurrentPage = 0,
+    this.photosList,
   });
-
-  PhotosGalleryState requestSuccess(PhotosApiResponseModel photosApiResponse) {
-    return copyWith(
-      isLoading: false,
-      failure: Nullable(null),
-      photosApiResponse: photosApiResponse,
-    );
-  }
 
   PhotosGalleryState requestFailure(Failure failure) {
     return copyWith(
@@ -28,11 +26,18 @@ class PhotosGalleryState {
 
   PhotosGalleryState copyWith(
       {bool? isLoading,
-      PhotosApiResponseModel? photosApiResponse,
+      bool? isPaginating,
+      int? startOfTheCurrentPage,
+      List<PhotoItemModel>? photosList,
+      Nullable<String?>? sortBy,
       Nullable<Failure?>? failure}) {
     return PhotosGalleryState(
+      isPaginating: isPaginating ?? this.isPaginating,
+      startOfTheCurrentPage:
+          startOfTheCurrentPage ?? this.startOfTheCurrentPage,
       isLoading: isLoading ?? this.isLoading,
-      photosApiResponse: photosApiResponse ?? this.photosApiResponse,
+      sortBy: sortBy == null ? this.sortBy : sortBy.value,
+      photosList: photosList ?? this.photosList,
       failure: failure == null ? this.failure : failure.value,
     );
   }

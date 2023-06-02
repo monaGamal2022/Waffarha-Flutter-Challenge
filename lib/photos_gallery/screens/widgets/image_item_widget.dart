@@ -4,8 +4,13 @@ import '../../data/models/photo_item_model.dart';
 
 class PhotoListItem extends StatelessWidget {
   final PhotoItemModel photoItemModel;
+  final int index;
 
-  const PhotoListItem({super.key, required this.photoItemModel});
+  const PhotoListItem({
+    super.key,
+    required this.photoItemModel,
+    required this.index,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +37,14 @@ class PhotoListItem extends StatelessWidget {
                     _InfoBuilder(
                         infoKey: "Photo thumbnailUrl",
                         value: photoItemModel.thumbnailUrl),
+                    _InfoBuilder(
+                      infoKey: "IIIIndex",
+                      value: index.toString(),
+                    ),
+                    _InfoBuilder(
+                      infoKey: "IDDDD",
+                      value: photoItemModel.id.toString(),
+                    ),
                     const SizedBox(height: 8),
                     _InfoBuilder(
                       infoKey: "Photo album Id",

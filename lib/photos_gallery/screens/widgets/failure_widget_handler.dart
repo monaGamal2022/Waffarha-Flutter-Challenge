@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../core/failures.dart';
 
 class FailurePlaceHolderWidget extends StatelessWidget {
-  final Failure failure;
+  final Failure? failure;
   const FailurePlaceHolderWidget({super.key, required this.failure});
 
   @override
