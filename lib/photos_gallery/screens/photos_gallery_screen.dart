@@ -71,12 +71,25 @@ class _PhotosGalleryScreenState extends State<PhotosGalleryScreen> {
                 onTap: () {
                   showModalBottomSheet(
                     context: context,
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        topRight: Radius.circular(12),
+                      ),
+                    ),
                     builder: (bcontext) {
                       return Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          const SizedBox(height: 32),
-                          const Text("Sort"),
+                          const SizedBox(height: 16),
+                          const Text(
+                            "Sort",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.orange,
+                              fontSize: 24,
+                            ),
+                          ),
                           const Divider(),
                           InkWell(
                             onTap: () {
