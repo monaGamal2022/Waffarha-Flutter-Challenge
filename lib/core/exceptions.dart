@@ -1,6 +1,7 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:equatable/equatable.dart';
+// ignore: implementation_imports
 import 'package:dio/src/response.dart';
 import 'models/response_model.dart';
 

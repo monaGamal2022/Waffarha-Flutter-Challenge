@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:waffarha_challenge/core/api_manager.dart';
 import 'package:waffarha_challenge/core/utils/nullable.dart';
@@ -63,7 +64,9 @@ class PhotosGalleryCubit extends Cubit<PhotosGalleryState> {
             startOfTheCurrentPage: start,
           ),
         );
-        print("view now has ${list.length}");
+        if (kDebugMode) {
+          print("view now has ${list.length}");
+        }
       },
     );
   }

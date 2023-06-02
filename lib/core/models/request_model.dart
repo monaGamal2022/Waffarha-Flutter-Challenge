@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+// ignore: implementation_imports
 import 'package:dio/src/cancel_token.dart';
 
 abstract class RequestModel extends Equatable {
