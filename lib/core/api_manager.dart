@@ -64,22 +64,6 @@ class APIsManager {
       );
 
       dio2curl(response.requestOptions, isMultiPart: request.multiPart);
-      var resp = response.data;
-
-      // if (resp is! Map<String, dynamic>) {
-      //   dynamic mapResponse;
-      //   try {
-      //     mapResponse =
-      //         isListResponse ? response.data : json.decode(response.data);
-      //   } catch (e) {
-      //     e.toString();
-      //   }
-      //   if (mapResponse != null && mapResponse is Map) {
-      //     resp = mapResponse;
-      //   } else {
-      //     resp = {'response': resp};
-      //   }
-      // }
 
       if (response.data is List && responseFromList != null) {
         return Right(responseFromList(response.data));

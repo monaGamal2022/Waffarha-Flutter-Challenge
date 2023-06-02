@@ -37,13 +37,19 @@ class PhotoListItem extends StatelessWidget {
                     _InfoBuilder(
                         infoKey: "Photo thumbnailUrl",
                         value: photoItemModel.thumbnailUrl),
-                    _InfoBuilder(
-                      infoKey: "IIIIndex",
-                      value: index.toString(),
+                    Visibility(
+                      visible: false,
+                      child: _InfoBuilder(
+                        infoKey: "IIIIndex",
+                        value: index.toString(),
+                      ),
                     ),
-                    _InfoBuilder(
-                      infoKey: "IDDDD",
-                      value: photoItemModel.id.toString(),
+                    Visibility(
+                      visible: false,
+                      child: _InfoBuilder(
+                        infoKey: "IDDDD",
+                        value: photoItemModel.id.toString(),
+                      ),
                     ),
                     const SizedBox(height: 8),
                     _InfoBuilder(

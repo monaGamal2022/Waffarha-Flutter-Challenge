@@ -1,7 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:waffarha_challenge/core/api_manager.dart';
 import 'package:waffarha_challenge/core/utils/nullable.dart';
-import 'package:waffarha_challenge/photos_gallery/data/models/photes_api_response_model.dart';
 import 'package:waffarha_challenge/photos_gallery/data/requests/get_phots_request.dart';
 
 import '../../data/models/photo_item_model.dart';
